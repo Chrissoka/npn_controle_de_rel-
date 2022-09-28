@@ -33,11 +33,13 @@ void loop() {
     } else {
 
       
-       digitalWrite(Relay, HIGH);
-       delay(stayON);
-       digitalWrite(Relay, LOW);
-    }
-    time = millis();
+  digitalWrite(Relay, HIGH);
+  delay(stayON);
+  digitalWrite(Relay, LOW);
+  
+   }
+    
+   time = millis();
   }
   previous == stateButton;
 }
