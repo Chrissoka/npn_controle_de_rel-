@@ -7,7 +7,7 @@
 # CÓDIGO
 *C++*
 
-'''
+
     
     int pinButton = 8;
     int Relay = 2;
@@ -42,4 +42,4 @@
       previous == stateButton;
     }
 
-'''
+
