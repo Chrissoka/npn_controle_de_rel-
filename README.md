@@ -8,7 +8,6 @@
 *C++*
 
 '''
-
     int pinButton = 8;
     int Relay = 2;
     int stateRelay = LOW;
@@ -21,27 +20,25 @@
     int stayON = 5000;
 
     void setup() {
-    pinMode(pinButton, INPUT);
-    pinMode(Relay, OUTPUT);
+      pinMode(pinButton, INPUT);
+      pinMode(Relay, OUTPUT);
     }
 
     void loop() {
-    stateButton = digitalRead(pinButton);  
-    if(stateButton == HIGH && previous == LOW && millis() - time > debounce) {
-      if(stateRelay == HIGH){
-        digitalWrite(Relay, LOW);
-      } else {
+      stateButton = digitalRead(pinButton);  
+      if(stateButton == HIGH && previous == LOW && millis() - time > debounce) {
+        if(stateRelay == HIGH){
+          digitalWrite(Relay, LOW);
+        } else {
 
 
-    digitalWrite(Relay, HIGH);
-    delay(stayON);
-    digitalWrite(Relay, LOW);
-
-     }
-
-     time = millis();
-    }
-    previous == stateButton;
+           digitalWrite(Relay, HIGH);
+           delay(stayON);
+           digitalWrite(Relay, LOW);
+        }
+        time = millis();
+      }
+      previous == stateButton;
     }
 
 '''
